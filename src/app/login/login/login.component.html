@@ -1,0 +1,22 @@
+<div class="loginform" fxLayoutAlign="center center" fxFlexFill>
+    <div fxFlex="40" class="login_box">
+        <h4 class="mb-10 m-0 txt-ble">Welcome</h4>
+        <form #form="ngForm" class="mb-10" [formGroup]="loginform" fxLayout="column" fxLayoutGap="15px">
+            <mat-form-field>
+                <mat-label>Email ID</mat-label>
+                <input matInput formControlName="emailid" required [readonly]="loaded">
+                <mat-error *ngIf="fvalue['emailid'].errors?.['required']">Enter the Email id</mat-error>
+                <mat-error *ngIf="fvalue['emailid'].errors?.['pattern']">Enter the valid Email id</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" required [readonly]="loaded" [type]="!hidebtn?'password':'text'">
+                <button mat-icon-button matSuffix *ngIf="fvalue['password'].value" type="button" (click)="hidebtn = !hidebtn" class="material-symbols-outlined"><mat-icon *ngIf="hidebtn">lock</mat-icon><mat-icon *ngIf="!hidebtn">lock_open</mat-icon></button>
+                <mat-error *ngIf="fvalue['password'].errors?.['required']">Enter the password</mat-error>
+            </mat-form-field>
+            <mat-checkbox  formControlName="acceptTerms">Remember me</mat-checkbox>
+            <button mat-raised-button class="sub-button fs-16" color="primary" [disabled]="loaded " (click)="submit()" type="submit"><span *ngIf="!loaded">Login</span><mat-spinner *ngIf="loaded"  [diameter]="25"></mat-spinner></button>
+        </form>
+        <p class="fs-14 m-0">Don't have an Account? <span class="fs-14 txt-ble">Register</span></p>
+    </div>
+</div>

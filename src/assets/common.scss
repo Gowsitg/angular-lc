@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.login_box {
+   border: 1px solid #ededed;
+   padding: 30px;
+   border-radius: 4px;
+}
+
+.sub-button {
+  height: 40px !important;
+  box-shadow: none !important;
+  border-radius: 2px !important;
+  color: #ffffff !important;
+  background-color: #007bff !important;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+
+.mat-mdc-form-field-error {
+  font-size: 13px;
+}
+
+.mdc-text-field {
+  font-size: 14px;
+} 
+.mdc-text-field--filled {
+  background-color: transparent !important;
+}
+
+.mdc-button:disabled {
+  background-color: #efefef !important;
+}
+.mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background {
+  border-color: #007bff !important;
+  background-color: #007bff !important;
+}
+
+.txt-ble {
+  color: #007bff;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.mb-10 {
+  margin-bottom: 15px;
+}
